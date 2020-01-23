@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sinatra Template</title>
+    <meta charset="utf-8">
+    <title>Sinatra App</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    </head>
+
+
+  <body>
+    <h1>Articles to Procrastinate With!</h1>
+    <script src="/javascripts/app.js"></script>
+    <ul>
+      <% @articles.each do |article| %>
+      <li>
+
+        <h3><%= "#{article.title}" %></a></h3>
+        <p><%= "#{article.description}" %></p>
+
+      </li>
+
+      <% end %>
+    </ul>
+
+    <h1><a href ="/articles/new">Add a New Article</a></h1><br />
+    <h1><a href ="/random">Random Page</a></h1>
+
+  </body>
+
+
+</html>
